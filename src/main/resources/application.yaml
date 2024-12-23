@@ -4,15 +4,17 @@ server:
 spring:
   application:
     name: backSpark
+  flyway:
+    enabled: true
   datasource:
     username: postgres
     password: postgres
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/
   jpa:
-    show-sql: true
+    show-sql: false
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         format_sql: true
